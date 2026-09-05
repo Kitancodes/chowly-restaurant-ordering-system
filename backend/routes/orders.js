@@ -52,6 +52,7 @@ router.post("/", async (req, res) => {
 
     const order = await prisma.order.create({
       data: {
+        orderNumber: `ORD-${Date.now().toString().slice(-6)}`,
         total,
         waitingTime,
         status: "Pending",

@@ -258,7 +258,7 @@ function App() {
               <div>
                 <p className="text-xs text-white/50">Order Number</p>
                 <p className="mt-1 text-lg font-medium text-amber-400">
-                  {currentOrder.id}
+                  {currentOrder.orderNumber}
                 </p>
               </div>
               <div className="text-right">
@@ -473,7 +473,7 @@ function App() {
                       >
                         <div className="mb-3 flex items-center justify-between">
                           <div>
-                            <p className="font-medium text-amber-400">{order.id}</p>
+                            <p className="font-medium text-amber-400">{order.orderNumber}</p>
                             <p className="mt-1 text-xs text-white/50">
                               {new Date(order.createdAt).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })} · {order.status}
                             </p>
@@ -614,7 +614,7 @@ function App() {
                     >
                       <div className="mb-3 flex items-center justify-between">
                         <div>
-                          <p className="font-medium text-amber-400">{order.id}</p>
+                          <p className="font-medium text-amber-400">{order.orderNumber}</p>
                           <p className="mt-1 text-xs text-white/50">
                             {new Date(order.createdAt).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })}
                           </p>
@@ -671,7 +671,7 @@ function App() {
                 <div className="lg:sticky lg:top-24">
                   {selectedOrder ? (
                     <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
-                      <h3 className="mb-1 text-lg font-medium">{selectedOrder.id}</h3>
+                      <h3 className="mb-1 text-lg font-medium">{selectedOrder.orderNumber}</h3>
                       <p className="mb-6 text-sm text-white/50">
                         Status: {selectedOrder.status}
                       </p>
